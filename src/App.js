@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import GameGrid from './components/GameGrid';
+import createGameService from './services/gamesService'
 
 function App() {
+  const gamesService = createGameService();
+  const games = gamesService.getAll();
+  const gameProviders = [
+    {value:"All",label:"All"},
+    {value:"OGS",label:"OGS"},
+    {value:"IGT",label:"IGT"}
+    ];
+  const gameCollectionIDs = [
+    {value:"All",label:"All"},
+    {value:"slots",label:"slots"},
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h3 className="ui block header">My Games</h3>
+      <GameGrid games={games} gameProviders={gameProviders} gameCollectionIDs={gameCollectionIDs} />
     </div>
   );
 }
