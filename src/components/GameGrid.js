@@ -51,8 +51,6 @@ class GameGrid extends Component {
     this.updateCurrentGames()
   };
 
-  // TODO: Better CSS for mobile view, use the full width for the select-boxes
-
   render() {
     return (
       <div className="ui doubling stackable grid container">

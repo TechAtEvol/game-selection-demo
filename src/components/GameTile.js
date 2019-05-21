@@ -3,7 +3,6 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const GameTile = props => {
   // TODO: Add a small snapshot test perhaps of the tile rendering
-  // TODO: Better CSS for mobile view, use the full width
   const { game } = props;
   return (
     <div className="ui card">

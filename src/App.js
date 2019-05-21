@@ -4,7 +4,6 @@ import './App.css'
 import branding from './config/branding'
 
 function App() {
-  // TODO: Support branding
   return (
     <div className="App">
       <span>
