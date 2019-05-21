@@ -9,6 +9,8 @@ const gameProviders = [
 const gameCollectionIDs = [
   {value:"All",label:"All"},
   {value:"slots",label:"slots"},
+  {value:"table-games",label:"table-games"},
+  {value:"top-rated-live",label:"top-rated-live"},
 ];
 
 const games = () => {

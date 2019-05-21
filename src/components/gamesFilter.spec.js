@@ -22,9 +22,10 @@ describe('gamesFilter', () => {
   });
   describe('when filtering on a given gameCollectionId', () => {
     it('returns a matching list for that gameCollectionId', () => {
-      const firstGameCollectionId = testGameList[0].gameCollectionIds[0]
+      const firstGameCollectionId = "table-games";
+      const NO_OF_TABLE_GAMES = 29;
       const result = filterOnGameCollectionID(testGameList, firstGameCollectionId);
-      expect(result.length > 0).toBe(true);
+      expect(result.length).toBe(NO_OF_TABLE_GAMES);
     });
     it('returns all if the gameCollectionId is All', () => {
       const NoOfUndefinedGameCollection = 30;

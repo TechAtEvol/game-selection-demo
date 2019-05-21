@@ -33,22 +33,22 @@ class GameGrid extends Component {
     })
   };
 
-  updateCurrentGames() {
-    const firstFiltering = filterOnGameProvider(this.state.games, this.state.selectedProvider);
-    const secondFiltering = filterOnGameCollectionID(firstFiltering, this.state.selectedCollection);
+  updateCurrentGames(selectedProvider, selectedCollection) {
+    const firstFiltering = filterOnGameProvider(this.state.games, selectedProvider);
+    const secondFiltering = filterOnGameCollectionID(firstFiltering, selectedCollection);
     this.setState(() => ({
       currentGames: secondFiltering
     }));
   }
 
   updateSelectedProvider = (selected)=> {
-    this.setState({selectedProvider:selected.value});
-    this.updateCurrentGames()
+    this.setState(() => ({selectedProvider:selected.value}));
+    this.updateCurrentGames(selected.value, this.state.selectedCollection)
   };
 
   updateSelectedCollection = (selected)=> {
-    this.setState({selectedCollection:selected.value});
-    this.updateCurrentGames()
+    this.setState(() => ({selectedCollection:selected.value}));
+    this.updateCurrentGames(this.state.selectedProvider, selected.value)
   };
 
   render() {
