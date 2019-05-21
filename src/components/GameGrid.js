@@ -25,9 +25,9 @@ class GameGrid extends Component {
   updateCurrentGames() {
     const firstFiltering = filterOnGameProvider(this.state.games, this.state.selectedProvider);
     const secondFiltering = filterOnGameCollectionID(firstFiltering, this.state.selectedCollection);
-    this.setState({ currentGames: secondFiltering })
-    // bug. set state is async and the render is one game list behind
-    // Add redux for predictable state
+    this.setState(() => ({
+      currentGames: secondFiltering
+    }));
   }
 
   updateSelectedProvider = (selected)=> {
