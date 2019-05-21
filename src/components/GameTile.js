@@ -2,7 +2,6 @@ import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const GameTile = props => {
-  // TODO: Add a small snapshot test perhaps of the tile rendering
   const { game } = props;
   return (
     <div className="ui card">
