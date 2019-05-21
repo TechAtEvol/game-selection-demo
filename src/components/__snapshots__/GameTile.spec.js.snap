@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameTile renders correctly 1`] = `
+<div
+  className="ui card"
+>
+  <div
+    className="image"
+  >
+    <span
+      className=""
+      style={
+        Object {
+          "display": "inline-block",
+          "height": 0,
+          "width": 0,
+        }
+      }
+    />
+  </div>
+  <div
+    className="content"
+  >
+    <div
+      className="header"
+    >
+      1 Can 2 Can
+    </div>
+    <div
+      className="description"
+    >
+      Jag kan, du kan... Tukan! Ta en promenad på den vilda sidan och besök Tukanen och hans vänners värld.  Detta orörda djungelparadis är fylld med färger, roliga frukter, vänliga djur och en Tukan som kommer driva ditt spel vilt med spänning.
+    </div>
+  </div>
+  <div
+    className="extra content"
+  >
+    <a
+      href="http://mrgreen.se"
+    >
+      <i
+        className="play icon"
+      />
+      Spela här
+    </a>
+  </div>
+</div>
+`;
