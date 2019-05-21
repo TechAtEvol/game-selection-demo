@@ -56,7 +56,7 @@ class GameGrid extends Component {
   render() {
     return (
       <div className="ui doubling stackable grid container">
-        <div className="ui four column row">
+        <div className="ui row">
           <div className="ui label">
             Provider:
             <Select className="ui dropdown game-provider"
@@ -80,5 +80,5 @@ class GameGrid extends Component {
       </div>
     )
   }
-};
+}
 export default GameGrid

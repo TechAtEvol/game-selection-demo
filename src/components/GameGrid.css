@@ -6,7 +6,17 @@
     min-width: 150px;
 }
 
+div .ui .row {
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
 @media only screen and (max-width: 768px) and (orientation: portrait) {
+    .ui.grid {
+        margin-top: 5px !important;
+        margin-bottom: -5px !important;
+    }
+
     .game-provider {
         min-width: 340px;
     }
