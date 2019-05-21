@@ -9,8 +9,6 @@ const GameTile = props => {
     <div className="ui card">
       <div className = "image">
         <LazyLoadImage
-          heigth = { 250 }
-          width =  { 250 }
           src = {game.thumbnailUrl}
           alt = {game.friendlyName}
         />
