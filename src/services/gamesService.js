@@ -1,11 +1,35 @@
 import allGames from './all-games';
 
+
+const gameProviders = [
+  {value:"All",label:"All"},
+  {value:"OGS",label:"OGS"},
+  {value:"IGT",label:"IGT"}
+];
+const gameCollectionIDs = [
+  {value:"All",label:"All"},
+  {value:"slots",label:"slots"},
+];
+
 const games = () => {
-  const getAll = () => {
+  const getAllGames = () => {
     return allGames;
-  }
+  };
+
+  // TODO: gameProviders, gameCollectionIDs could be calculated from the gamelist
+
+  const getGameProviders = () => {
+    return gameProviders
+  };
+
+  const getGameCollectionIDs = () => {
+    return gameCollectionIDs;
+  };
+
   return {
-    getAll
+    getAllGames,
+    getGameProviders,
+    getGameCollectionIDs
   }
 };
 

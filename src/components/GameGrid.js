@@ -4,14 +4,19 @@ import GameTile from './GameTile';
 import createGamesFilter from './gamesFilter'
 import Select from 'react-select'
 import './GameGrid.css'
+import createGameService from './../services/gamesService'
 
 const { filterOnGameProvider, filterOnGameCollectionID } = createGamesFilter();
+const { getAllGames, getGameProviders, getGameCollectionIDs } = createGameService();
 
 class GameGrid extends Component {
   constructor(props) {
     super(props);
     this.state =  {
       ...props,
+      games: [],
+      gameProviders: [],
+      gameCollectionIDs: [],
       selectedProvider: 'All',
       selectedCollection: 'All',
       currentGames : []
@@ -19,7 +24,13 @@ class GameGrid extends Component {
   }
 
   componentDidMount() {
-    this.setState({currentGames: this.state.games})
+    this.setState({
+      ...this.state,
+      games: getAllGames(),
+      currentGames: getAllGames(),
+      gameProviders: getGameProviders(),
+      gameCollectionIDs: getGameCollectionIDs()
+    })
   };
 
   updateCurrentGames() {
