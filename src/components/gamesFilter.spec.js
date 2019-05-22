@@ -28,10 +28,9 @@ describe('gamesFilter', () => {
       expect(result.length).toBe(NO_OF_TABLE_GAMES);
     });
     it('returns all if the gameCollectionId is All', () => {
-      const NoOfUndefinedGameCollection = 30;
       const gameCollectionId = "All";
       const result = filterOnGameCollectionID(testGameList, gameCollectionId);
-      expect(result.length).toBe(testGameList.length - NoOfUndefinedGameCollection);
+      expect(result.length).toBe(testGameList.length);
     })
     it('returns none if the gameCollectionId is undefined', () => {
       const gameCollectionId = undefined;

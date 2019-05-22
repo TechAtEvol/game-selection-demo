@@ -2,7 +2,7 @@ const gamesFilter = () => {
 
   const filterOnGameProvider = (games, gameProvider) => {
     return games.filter( game => {
-      if(! game.gameProvider) return false;
+      if(! game.gameProvider && gameProvider !== 'All') return false;
       if(gameProvider === 'All') return true;
       return game.gameProvider === gameProvider
     })
@@ -10,9 +10,9 @@ const gamesFilter = () => {
 
   const filterOnGameCollectionID = (games, gameCollectionId) => {
     const matchingGames = games.filter( game => {
-      if(! game.gameCollectionIds) return false;
+      if(! game.gameCollectionIds && gameCollectionId !== 'All') return false;
+      if(gameCollectionId === 'All') return true;
       const matches = game.gameCollectionIds.filter( id => {
-        if(gameCollectionId === 'All') return true;
         return id === gameCollectionId
       });
       return matches.length > 0
